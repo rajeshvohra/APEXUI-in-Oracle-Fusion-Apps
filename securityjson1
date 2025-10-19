@@ -1,0 +1,6 @@
+{
+  "security.oauth2.client_id": "your-client-id",
+  "security.oauth2.client_secret": "your-client-secret",
+  "security.oauth2.token_url": "https://idcs-<tenancy>.oraclecloud.com/oauth2/v1/token",
+  "security.oauth2.authorization_url": "https://idcs-<tenancy>.oraclecloud.com/oauth2/v1/authorize"
+}
