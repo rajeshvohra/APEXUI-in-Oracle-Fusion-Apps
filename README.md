@@ -109,6 +109,29 @@ If using OAuth redirect: https://yourapexserver.com/ords/f?p=100:1:0::::::
 If user is already authenticated via SSO, they'll be redirected seamlessly.
 
 
+To Add an iFrame to Your Extension Page
+
+Inside your VBX extension page:
+Drag and drop a "Web View" or HTML component.
+Add the checkedin iframehtml code to embed your APEX app
+Ensure that your APEX server allows embedding via iframe by setting the proper X-Frame-Options or Content-Security-Policy.
 
 
+Handle Authentication (SSO or Login)
 
+If your APEX app is SSO-enabled via IDCS, it will auto-authenticate when the user accesses the embedded iframe. If not, the iframe will prompt for login (not ideal).
+Best practice is to set up SSO between APEX and Fusion via IDCS (see previous message), so the embedded app does not show login prompts.
+
+Deploy the Extension
+
+Click Deploy inside VBX.
+Publish the extension to your Fusion sandbox.
+Test it in the sandbox environment:
+Navigate to the extended Fusion page. Ensure the embedded APEX app loads correctly.
+Publish the Sandbox once verified.
+
+Now your APEX application is seamlessly embedded inside Oracle Fusion, such as:
+A new tab inside an employee's record.A new section in a procurement workspace. 
+A completely new page accessible from the navigator menu. Users will see and use the APEX app within the Fusion UI, not as a separate browser window.
+
+If you need further assistance , please comment and I will be more than happy to help.
